@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <script src="lib/jquery/jquery-1.10.2.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-animate.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  
+  <script src="lib/bootstrap/bootstrap.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/services.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top" xmlns="http://www.w3.org/1999/html">
+    <div class="navbar-inner">
+        <div class="container">
+
+            <a class="brand" href="#">Backbone Cellar</a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="add-menu"><a href="#wines/add"><i class="icon-edit icon-white"></i> Add Wine</a></li>
+                </ul>
+
+                <ul class="nav pull-right">
+                    <li class="about-menu"><a href="#about">About</a></li>
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://documentcloud.github.com/backbone/" target="_blank">Backbone.js</a></li>
+                            <li><a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a></li>
+                            <li><a href="http://documentcloud.github.com/underscore/" target="_blank">Underscore.js</a></li>
+                            <li class="divider"></li>
+                            <li class="nav-header">This App</li>
+                            <li><a href="#" target="_blank">GitHub Repository</a></li>
+                            <li><a href="http://coenraets.org" target="_blank">Author's Blog</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="container">
+    <div class="row">
+        <div id="content" class="span12>"></div>
+    </div>
+
+    <footer class="footer">
+        <p class="pull-right"><a href="#">Back Home</a></p>
+
+        <p>Built as a sample application with <a href="http://documentcloud.github.com/backbone/" target="_blank">Backbone.js</a>
+            and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> by <a
+                    href="http://coenraets.org" target="_blank">Christophe Coenraets</a>.</p>
+
+        <p>The source code for this application is available in <a href="#">this repository</a> on GitHub.</p>
+    </footer>
+
+</div>
+<!--    
+  <div class="view-container">
+    <div ng-view class="view-frame"></div>
+  </div>
+//-->
+</body>
+</html>
