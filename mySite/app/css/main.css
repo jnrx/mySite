@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 26, 2014, 2:17:54 PM
+    Author     : Janerus
+*/
+html, body {
+  height: 100%; }
+
+body {
+  color: #5a5a5a; }
+
+.item-bg {
+  background-attachment: fixed;
+  background-color: #222;
+  background-position: center;
+  background-repeat: no-repeat no-repeat;
+  background-size: cover; }
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20; }
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+  padding-right: 0;
+  padding-left: 0; }
+
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px; }
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.carousel {
+  height: 100%; }
+  .carousel .carousel-caption {
+    z-index: 10; }
+  .carousel .carousel-inner {
+    height: 100%; }
+    .carousel .carousel-inner .item {
+      height: 100%; }
+      .carousel .carousel-inner .item .container {
+        width: 100% !important;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75); }
