@@ -16,7 +16,7 @@ jQuery.noConflict();
             fileName = i+'.jpg';
         }
         var imgFile = 'img/'+fileName;
-        $('.carousel-inner .item:nth-child('+i+')').addClass('item-bg');
+//        $('.carousel-inner .item:nth-child('+i+')').addClass('item-bg');
         $('.carousel-inner .item:nth-child('+i+')').css('background-image', 'url("'+imgFile+'")');
     }
     
