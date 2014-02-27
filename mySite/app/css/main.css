@@ -13,13 +13,6 @@ html, body {
 body {
   color: #5a5a5a; }
 
-.item-bg {
-  background-attachment: fixed;
-  background-color: #222;
-  background-position: center;
-  background-repeat: no-repeat no-repeat;
-  background-size: cover; }
-
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -29,16 +22,16 @@ body {
   right: 0;
   left: 0;
   z-index: 20; }
+  .navbar-wrapper .container {
+    padding-right: 0;
+    padding-left: 0;
+    width: 220px; }
+  .navbar-wrapper .navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 250px; }
 
 /* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper .container {
-  padding-right: 0;
-  padding-left: 0; }
-
-.navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px; }
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 /* Carousel base class */
@@ -49,7 +42,12 @@ body {
   .carousel .carousel-inner {
     height: 100%; }
     .carousel .carousel-inner .item {
-      height: 100%; }
+      height: 100%;
+      background-attachment: fixed;
+      background-color: #222;
+      background-position: center;
+      background-repeat: no-repeat no-repeat;
+      background-size: cover; }
       .carousel .carousel-inner .item .container {
         width: 100% !important;
         height: 100%;
