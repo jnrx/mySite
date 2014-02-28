@@ -9,11 +9,12 @@ and open the template in the editor.
 */
 $bg-overlay-color: rgba(0,0,0,0.75);
 
-html, body {
+html {
     height: 100%;
 }
 
 body {
+  @extend html;
   color: #5a5a5a;
 }
 

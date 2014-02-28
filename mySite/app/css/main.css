@@ -7,50 +7,72 @@ and open the template in the editor.
     Created on : Feb 26, 2014, 2:17:54 PM
     Author     : Janerus
 */
+/* line 12, main.scss */
 html, body {
-  height: 100%; }
+  height: 100%;
+}
 
+/* line 16, main.scss */
 body {
-  color: #5a5a5a; }
+  color: #5a5a5a;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
+/* line 25, main.scss */
 .navbar-wrapper {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   z-index: 20;
-  width: 250px; }
-  .navbar-wrapper .container {
-    padding-right: 0;
-    padding-left: 0; }
-  .navbar-wrapper .navbar {
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 250px; }
-    .navbar-wrapper .navbar .container {
-      width: 220px; }
+  width: 250px;
+}
+/* line 33, main.scss */
+.navbar-wrapper .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+/* line 38, main.scss */
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 250px;
+}
+/* line 43, main.scss */
+.navbar-wrapper .navbar .container {
+  width: 220px;
+}
 
 /* Flip around the padding for proper display in narrow viewports */
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 /* Carousel base class */
+/* line 55, main.scss */
 .carousel {
-  height: 100%; }
-  .carousel .carousel-caption {
-    z-index: 10; }
-  .carousel .carousel-inner {
-    height: 100%; }
-    .carousel .carousel-inner .item {
-      height: 100%;
-      background-attachment: fixed;
-      background-color: #222;
-      background-position: center;
-      background-repeat: no-repeat no-repeat;
-      background-size: cover; }
-      .carousel .carousel-inner .item .container {
-        width: 100% !important;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.75); }
+  height: 100%;
+}
+/* line 58, main.scss */
+.carousel .carousel-caption {
+  z-index: 10;
+}
+/* line 62, main.scss */
+.carousel .carousel-inner {
+  height: 100%;
+}
+/* line 65, main.scss */
+.carousel .carousel-inner .item {
+  height: 100%;
+  background-attachment: fixed;
+  background-color: #222;
+  background-position: center;
+  background-repeat: no-repeat no-repeat;
+  background-size: cover;
+}
+/* line 73, main.scss */
+.carousel .carousel-inner .item .container {
+  width: 100% !important;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
