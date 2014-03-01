@@ -23,4 +23,7 @@ jQuery.noConflict();
     $('.carousel').carousel({
         interval: false
     });
+    
+    $('.navbar-wrapper').hideMenu();
+    $('.navbar-wrapper').showMenu();
 })(jQuery);

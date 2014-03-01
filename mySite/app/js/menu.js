@@ -7,5 +7,11 @@
 
 jQuery.noConflict();
 (function($) {
-    
+    $.fn.hideMenu = function() {
+       $(this).css('left', '-200px');
+    };
+
+    $.fn.showMenu = function() {
+       $(this).css('left', '0px');
+    };
 })(jQuery);
