@@ -16,23 +16,32 @@ body {
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
-  width: 250px; }
-  .navbar-wrapper .container {
-    padding-right: 0;
-    padding-left: 0; }
-  .navbar-wrapper .navbar {
-    padding-right: 15px;
-    padding-left: 15px;
+@media (min-width: 1024px) {
+  .navbar-wrapper {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
     width: 250px; }
-    .navbar-wrapper .navbar .container {
-      width: 220px; }
-
+    .navbar-wrapper:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    * html .navbar-wrapper, * body .navbar-wrapper {
+      height: 1px; }
+    .navbar-wrapper .container {
+      padding-right: 0;
+      padding-left: 0; }
+    .navbar-wrapper .navbar {
+      padding-right: 15px;
+      padding-left: 15px;
+      width: 250px; }
+      .navbar-wrapper .navbar .container {
+        width: 220px; } }
 /* Flip around the padding for proper display in narrow viewports */
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
