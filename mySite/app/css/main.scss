@@ -79,28 +79,28 @@ body {
 
 /* Carousel base class */
 .carousel {
-  height: 100%;
+    height: 100%;
   
-  .carousel-caption {
-      z-index: 10;
-  }
+    .carousel-caption {
+        z-index: 10;
+    }
   
-  .carousel-inner {
-      height: 100%;
+    .carousel-inner {
+        height: 100%;
       
-      .item {
-          height: 100%;
-          background-attachment: fixed;
-          background-color: #222;
-          background-position: center;
-          background-repeat: no-repeat no-repeat;
-          background-size: cover;
+        .item {
+            height: 100%;
+            background-attachment: fixed;
+            background-color: #222;
+            background-position: center;
+            background-repeat: no-repeat no-repeat;
+            background-size: cover;
 
-          .container {
-              width: 100% !important;
-              height: 100%;
-              background-color: $bg-overlay-color;
-          }
-      }
-  }
+            .container {
+                width: 100% !important;
+                height: 100%;
+                background-color: $bg-overlay-color;
+            }
+        }
+    }
 }
