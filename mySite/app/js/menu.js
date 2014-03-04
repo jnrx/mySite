@@ -17,7 +17,7 @@ jQuery.noConflict();
 //                $(this).hideMenu();
 //            },
             click: function() {
-                $(this).toggle($(this).showMenu(), $(this).hideMenu());
+                $(this).toggle(function() {$(this).showMenu();}, function(){$(this).hideMenu();});
             }
             
 
