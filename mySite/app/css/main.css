@@ -35,7 +35,8 @@ body {
       height: 1px; }
     .navbar-wrapper .container {
       padding-right: 0;
-      padding-left: 0; }
+      padding-left: 0;
+      width: 250px; }
     .navbar-wrapper .navbar {
       padding-right: 15px;
       padding-left: 15px;

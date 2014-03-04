@@ -24,6 +24,7 @@ jQuery.noConflict();
         interval: false
     });
     
-    $('.navbar-wrapper').hideMenu();
-    $('.navbar-wrapper').showMenu();
+    $('.mainMenu').mainMenu();
+    
+    $('#mainCarousel').carousel(2);
 })(jQuery);
