@@ -8,22 +8,22 @@
 jQuery.noConflict();
 (function($) {
     $.fn.mainMenu = function() {
-        $(this).hideMenu();
+        $(this).showMenu();
         $(this).on({
             mouseenter: function() {
                 $(this).showMenu();
-            }, mouseleave: function() {
+            },
+            mouseleave: function() {
                 $(this).hideMenu();
             }
+
         });
     };
     $.fn.hideMenu = function() {
-//       $(this).css('left', (0 - $(this).width()));
         $(this).animate({"left": (0 - $(this).width())});
     };
 
     $.fn.showMenu = function() {
-//       $(this).css('left', '0px');
         $(this).animate({"left": "0px"});
     };
 })(jQuery);
