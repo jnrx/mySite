@@ -65,9 +65,9 @@ body {
         padding: 10px;
         background-color: #000;
         color: #fff;
-        position: absolute;
-        top: 0px;
-        left: 250px;
+        float: right;
+        margin-right: -50px;
+        height: 100%;
     }
 }
 
