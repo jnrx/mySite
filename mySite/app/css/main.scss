@@ -36,39 +36,40 @@ body {
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 @media (min-width:1024px) {
     .navbar-wrapper {
-      @include clearfix;
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 20;
-      width: 250px;
+        @include clearfix;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 20;
+        width: 250px;
 
-      .container {
-          padding-right: 0;
-          padding-left: 0;
-          width: 250px;
-      }
+        .container {
+            padding-right: 0;
+            padding-left: 0;
+            width: 250px;
+        }
 
-      .navbar {
-          padding-right: 15px;
-          padding-left: 15px;
-          width: 250px;
+        .navbar {
+            padding-right: 15px;
+            padding-left: 15px;
+            width: 250px;
 
-          .container {
-              width: 220px;
-          }
-      }
+            .container {
+                width: 220px;
+            }
+        }
+
+        .navbar-tab {
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            float: right;
+            margin-right: -50px;
+            height: 100%;
+        }
     }
     
-    .navbar-tab {
-        padding: 10px;
-        background-color: #000;
-        color: #fff;
-        float: right;
-        margin-right: -50px;
-        height: 100%;
-    }
 }
 
 /* Flip around the padding for proper display in narrow viewports */

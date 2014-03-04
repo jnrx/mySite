@@ -43,14 +43,13 @@ body {
       width: 250px; }
       .navbar-wrapper .navbar .container {
         width: 220px; }
-
-  .navbar-tab {
-    padding: 10px;
-    background-color: #000;
-    color: #fff;
-    float: right;
-    margin-right: -50px;
-    height: 100%; } }
+    .navbar-wrapper .navbar-tab {
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      float: right;
+      margin-right: -50px;
+      height: 100%; } }
 /* Flip around the padding for proper display in narrow viewports */
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
