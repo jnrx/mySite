@@ -36,24 +36,26 @@ body {
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 @media (min-width:1024px) {
     .navbar-wrapper {
-        @include clearfix;
         position: absolute;
         top: 0;
         right: 0;
         left: 0;
         z-index: 20;
         width: 250px;
+        height: 100%;
 
         .container {
             padding-right: 0;
             padding-left: 0;
             width: 250px;
+            height: 100%;
         }
 
         .navbar {
             padding-right: 15px;
             padding-left: 15px;
             width: 250px;
+            height: 100%;
 
             .container {
                 width: 220px;
@@ -66,7 +68,6 @@ body {
             color: #fff;
             float: right;
             margin-right: -50px;
-            height: 100%;
         }
     }
     

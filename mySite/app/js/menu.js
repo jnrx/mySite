@@ -10,14 +10,14 @@ jQuery.noConflict();
     $.fn.mainMenu = function() {
         $(this).showMenu();
         $(this).on({
-//            mouseenter: function() {
-//                $(this).showMenu();
+            mouseenter: function() {
+                $(this).showMenu();
+            },
+            mouseleave: function() {
+                $(this).hideMenu();
 //            },
-//            mouseleave: function() {
-//                $(this).hideMenu();
-//            },
-            click: function() {
-                $(this).toggle(function() {$(this).showMenu();}, function(){$(this).hideMenu();});
+//            click: function() {
+//                $(this).toggle(function() {$(this).showMenu();}, function(){$(this).hideMenu();});
             }
             
 
