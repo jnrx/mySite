@@ -57,6 +57,9 @@ body {
 
   .nav-open {
     left: 0px; } }
+@media (max-width: 768px) {
+  .navbar-tab {
+    display: none; } }
 /* Flip around the padding for proper display in narrow viewports */
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
