@@ -6,43 +6,35 @@
 'use strict';
 
 jQuery.noConflict();
+
 (function($) {
-    var menuDisplay = 0;
-    var thisMenu = $(this);
     $.fn.mainMenu = function() {
-        $(this).hideMenu();
-        $(this).on({
-/*            mouseenter: function() {
-                $(this).showMenu();
-            },
-            mouseleave: function() {
-                $(this).hideMenu();
-            },
-*/            click: function() {
-                switch(menuDisplay) {
-                    case 0:
-                        $(this).showMenu();
-                        break;
-                    case 1:
-                        $(this).hideMenu();
-                        break;
-                    
-                }
+        var myID = "#" + $(this).attr("id");
+        $(myID).showMenu();
+
+        $("body").on('click', function(event) {
+            event.stopPropagation();
+            if ($(this).find(myID).hasClass("nav-open")) {
+                $(this).find(myID).hideMenu();
             }
         });
-        $("div:not(.navbar-wrapper)").on({
-            click: function() {
-                $('.mainMenu').hideMenu();
+
+        $("body").on('click', myID, function(event) {
+            event.stopPropagation();
+            if ($(this).hasClass("nav-open")) {
+                $(this).hideMenu();
+            } else {
+                $(this).showMenu();
             }
         });
     };
     $.fn.hideMenu = function() {
-        menuDisplay = 0;
-        $(this).animate({"left": (0 - $(this).width())});
+        $(this).removeClass("nav-open");
+        $(this).addClass("nav-close");
     };
 
     $.fn.showMenu = function() {
-        menuDisplay = 1;
-        $(this).animate({"left": "0px"});
+        $(this).removeClass("nav-close");
+        $(this).addClass("nav-open");
    };
 })(jQuery);
