@@ -7,27 +7,42 @@
 
 jQuery.noConflict();
 (function($) {
+    var menuDisplay = 0;
+    var thisMenu = $(this);
     $.fn.mainMenu = function() {
-        $(this).showMenu();
+        $(this).hideMenu();
         $(this).on({
-//            mouseenter: function() {
-//                $(this).showMenu();
-//            },
-//            mouseleave: function() {
-//                $(this).hideMenu();
-//            },
-            click: function() {
-                $(this).toggle(function() {$(this).showMenu();}, function(){$(this).hideMenu();});
+/*            mouseenter: function() {
+                $(this).showMenu();
+            },
+            mouseleave: function() {
+                $(this).hideMenu();
+            },
+*/            click: function() {
+                switch(menuDisplay) {
+                    case 0:
+                        $(this).showMenu();
+                        break;
+                    case 1:
+                        $(this).hideMenu();
+                        break;
+                    
+                }
             }
-            
-
+        });
+        $("div:not(.navbar-wrapper)").on({
+            click: function() {
+                $('.mainMenu').hideMenu();
+            }
         });
     };
     $.fn.hideMenu = function() {
+        menuDisplay = 0;
         $(this).animate({"left": (0 - $(this).width())});
     };
 
     $.fn.showMenu = function() {
+        menuDisplay = 1;
         $(this).animate({"left": "0px"});
-    };
+   };
 })(jQuery);
