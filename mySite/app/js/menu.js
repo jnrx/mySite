@@ -12,16 +12,16 @@ jQuery.noConflict();
         var myID = "#" + $(this).attr("id");
         $(window).on("resize load", function() {
 //console.log($("body").find(".navbar-toggle").css("display"));
-            if ($("body").find(".navbar-toggle").css("display") === "none") {
+            if ($("body").find(".navbar-tab").css("display") === "block") {
 //console.log("myID="+myID);
                 $("body").off();
                 $(myID).hideMenu();
 
-                $("body").on('click', function(event) {
-//console.log("Body Clicked");
+                $(".mainCanvas").on('click', function(event) {
+//console.log("Canvas Clicked");
                     event.stopPropagation();
-                    if ($(this).find(myID).hasClass("nav-open")) {
-                        $(this).find(myID).hideMenu();
+                    if ($("body").find(myID).hasClass("nav-open")) {
+                        $("body").find(myID).hideMenu();
                     }
                 });
 
@@ -35,8 +35,8 @@ jQuery.noConflict();
                         $(this).showMenu();
                     }
                 });
-//            console.log("this is none");
            } else {
+console.log("this is none");
                $("body").off();
 
            }
