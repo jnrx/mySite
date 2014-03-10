@@ -21,7 +21,7 @@ jQuery.noConflict();
 //console.log("Canvas Clicked");
                     if ($("body").find(myID).hasClass("nav-open")) {
                         $("body").find(myID).hideMenu();
-                        event.stopPropagation();
+//                        event.stopPropagation();
                     }
                 });
 
@@ -29,16 +29,16 @@ jQuery.noConflict();
 //console.log("Menu Clicked");
                     if ($(this).hasClass("nav-open")) {
                         $(this).hideMenu();
-                        event.stopPropagation();
+//                        event.stopPropagation();
                     } else {
 //console.log("Menu Closed");
                         $(this).showMenu();
-                        event.stopPropagation();
+//                        event.stopPropagation();
                     }
                 });
            } else {
-console.log("this is none");
-               $("body").off();
+//console.log("this is none");
+//               $("body").off();
 
            }
         });

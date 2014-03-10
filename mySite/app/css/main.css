@@ -56,7 +56,10 @@ body {
     left: -250px; }
 
   .nav-open {
-    left: 0px; } }
+    left: 0px; }
+
+  .menu-link, .menu-link a {
+    cursor: pointer; } }
 @media (max-width: 1023px) {
   .navbar-tab {
     display: none; } }

@@ -27,4 +27,13 @@ jQuery.noConflict();
     $('#mainMenu').mainMenu();
     
     $('#mainCarousel').carousel(2);
+
+    $('#mainCarousel').on('slid.bs.carousel', function(evt) {
+console.log($('#mainCarousel').delay(800).find('.carousel-indicators .active').data('slideTo')); 
+
+        copyIndicator();
+    });
+    function copyIndicator() {
+//        $('.my-carousel-indicator').data('slide-to');
+    }
 })(jQuery);

@@ -84,7 +84,10 @@ body {
     .nav-open {
         left: 0px;
     }
-    
+
+    .menu-link, .menu-link a {
+        cursor: pointer;
+    }
 }
 
 @media (max-width:1023px) {
