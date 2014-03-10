@@ -19,20 +19,21 @@ jQuery.noConflict();
 
                 $(".mainCanvas").on('click', function(event) {
 //console.log("Canvas Clicked");
-                    event.stopPropagation();
                     if ($("body").find(myID).hasClass("nav-open")) {
                         $("body").find(myID).hideMenu();
+                        event.stopPropagation();
                     }
                 });
 
                 $("body").on('click', myID, function(event) {
 //console.log("Menu Clicked");
-                    event.stopPropagation();
                     if ($(this).hasClass("nav-open")) {
                         $(this).hideMenu();
+                        event.stopPropagation();
                     } else {
 //console.log("Menu Closed");
                         $(this).showMenu();
+                        event.stopPropagation();
                     }
                 });
            } else {
