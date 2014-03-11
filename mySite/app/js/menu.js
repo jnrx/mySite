@@ -9,30 +9,30 @@ jQuery.noConflict();
 
 (function($) {
     $.fn.mainMenu = function() {
-        var myID = "#" + $(this).attr("id");
+        var $this = $(this);
         $(window).on("resize load", function() {
 //console.log($("body").find(".navbar-toggle").css("display"));
-            if ($("body").find(".navbar-tab").css("display") === "block") {
+            if ($this.find(".navbar-tab").css("display") === "block") {
 //console.log("myID="+myID);
-                $("body").off();
-                $(myID).hideMenu();
+                $this.off();
+                $this.hideMenu();
 
-                $(".mainCanvas").on('click', function(event) {
+                $("body").find(".mainCanvas").on('click', function(event) {
 //console.log("Canvas Clicked");
-                    if ($("body").find(myID).hasClass("nav-open")) {
-                        $("body").find(myID).hideMenu();
+                    if ($this.hasClass("nav-open")) {
+                        $this.hideMenu();
 //                        event.stopPropagation();
                     }
                 });
 
-                $("body").on('click', myID, function(event) {
+                $this.on('click', function(event) {
 //console.log("Menu Clicked");
-                    if ($(this).hasClass("nav-open")) {
-                        $(this).hideMenu();
+                    if ($this.hasClass("nav-open")) {
+                        $this.hideMenu();
 //                        event.stopPropagation();
                     } else {
 //console.log("Menu Closed");
-                        $(this).showMenu();
+                        $this.showMenu();
 //                        event.stopPropagation();
                     }
                 });

@@ -29,11 +29,17 @@ jQuery.noConflict();
     $('#mainCarousel').carousel(2);
 
     $('#mainCarousel').on('slid.bs.carousel', function(evt) {
-  var carouselData = $(this).data('bs.carousel');
+        var $this = $(this);
+  var carouselData = $this.data('bs.carousel');
   var currentIndex = carouselData.getActiveIndex();
-  var indexList = $(this).find('.carousel-indicators li');
-  $.each (indexList, function() {
-console.log(indexList.data('slideTo'));      
+  $('a.nav-control').each(function(idx) {
+console.log(idx);
+if (idx === currentIndex) {
+console.log($(this).attr('class'));
+$(this).addClass("active");
+} else {
+    $(this).removeClass("active");
+}
   });
  //        $(this).find('.carousel-indicators li').data('slideTo');
 //console.log(listCount); 
