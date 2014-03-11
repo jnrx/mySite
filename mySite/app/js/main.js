@@ -29,11 +29,18 @@ jQuery.noConflict();
     $('#mainCarousel').carousel(2);
 
     $('#mainCarousel').on('slid.bs.carousel', function(evt) {
-console.log($('#mainCarousel').delay(800).find('.carousel-indicators .active').data('slideTo')); 
+  var carouselData = $(this).data('bs.carousel');
+  var currentIndex = carouselData.getActiveIndex();
+  var indexList = $(this).find('.carousel-indicators li');
+  $.each (indexList, function() {
+console.log(indexList.data('slideTo'));      
+  });
+ //        $(this).find('.carousel-indicators li').data('slideTo');
+//console.log(listCount); 
 
-        copyIndicator();
     });
     function copyIndicator() {
 //        $('.my-carousel-indicator').data('slide-to');
+return $('#mainCarousel').find('.carousel-indicators .active').data('slideTo');
     }
 })(jQuery);
