@@ -33,9 +33,9 @@ jQuery.noConflict();
   var carouselData = $this.data('bs.carousel');
   var currentIndex = carouselData.getActiveIndex();
   $('a.nav-control').each(function(idx) {
-console.log(idx);
+//console.log(idx);
 if (idx === currentIndex) {
-console.log($(this).attr('class'));
+//console.log($(this).attr('class'));
 $(this).addClass("active");
 } else {
     $(this).removeClass("active");
@@ -49,4 +49,34 @@ $(this).addClass("active");
 //        $('.my-carousel-indicator').data('slide-to');
 return $('#mainCarousel').find('.carousel-indicators .active').data('slideTo');
     }
+    
+    
+// Object Test
+    var Test = function() {
+        this.options = '';
+
+this.init = function(opt) {
+    this.options = opt;
+};
+
+        this.CLog = function() {
+            console.log("Inside Test Option: " + this.options);
+        };
+
+    };
+/*
+    Test.prototype.CLog = function() {
+        console.log("Test Option:" + this.option);
+    };
+*/    
+    var thisTest = new Test();
+    thisTest.init('15');
+    thisTest.CLog();
+    var Test2 = function(){};
+    Test2.prototype = new Test();
+    Test2.prototype.constructor = Test2;
+    var thatTest = new Test2();
+    thatTest.init('24');
+    thatTest.CLog();
+        
 })(jQuery);

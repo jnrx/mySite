@@ -269,7 +269,8 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
   var Carousel = function (element, options) {
     this.$element    = $(element)
-    this.$indicators = this.$element.find('.carousel-indicators')
+//    this.$indicators = this.$element.find('.carousel-indicators')
+    this.$indicators = $('body').find('.carousel-indicators')
     this.options     = options
     this.paused      =
     this.sliding     =
