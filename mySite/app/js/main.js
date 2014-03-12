@@ -20,12 +20,16 @@ jQuery.noConflict();
         $('.carousel-inner .item:nth-child('+i+')').css('background-image', 'url("'+imgFile+'")');
     }
     
-    $('.carousel').carousel({
-        interval: false
+    $('#mainCarousel').carouselExt({
+        targetID: 'mainCarousel',
+        interval: false,
+        page1: 0,
+        contact: 1,
+        page3: 2
     });
     
     $('#mainMenu').mainMenu();
-    
+/*    
     $('#mainCarousel').carousel(2);
 
     $('#mainCarousel').on('slid.bs.carousel', function(evt) {
@@ -68,7 +72,7 @@ this.init = function(opt) {
     Test.prototype.CLog = function() {
         console.log("Test Option:" + this.option);
     };
-*/    
+    
     var thisTest = new Test();
     thisTest.init('15');
     thisTest.CLog();
@@ -78,5 +82,5 @@ this.init = function(opt) {
     var thatTest = new Test2();
     thatTest.init('24');
     thatTest.CLog();
-        
+*/        
 })(jQuery);

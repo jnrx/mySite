@@ -8,7 +8,7 @@
 jQuery.noConflict();
 
 (function($) {
-    $.fn.mainMenu = function() {
+    $.fn.mainMenu = function(opt) {
         var $this = $(this);
         $(window).on("resize load", function() {
 //console.log($("body").find(".navbar-toggle").css("display"));
@@ -24,8 +24,8 @@ jQuery.noConflict();
 //                        event.stopPropagation();
                     }
                 });
-
-                $this.on('click', function(event) {
+//console.log($this.find('.navbar-tab').attr('class'));
+                $this.find(".navbar-tab").on('click', function() {
 //console.log("Menu Clicked");
                     if ($this.hasClass("nav-open")) {
                         $this.hideMenu();
