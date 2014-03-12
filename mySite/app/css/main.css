@@ -62,6 +62,7 @@ body {
     cursor: pointer; } }
 @media (max-width: 1023px) {
   .navbar-tab {
+    width: 40px;
     display: none; } }
 /* Flip around the padding for proper display in narrow viewports */
 /* CUSTOMIZE THE CAROUSEL
