@@ -9,6 +9,8 @@ and open the template in the editor.
 */
 $bg-overlay-color: rgba(0,0,0,0.75);
 
+$menuWidth : 250px;
+
 html {
     height: 100%;
 }
@@ -34,14 +36,14 @@ body {
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-@media (min-width:1024px) {
+@media (min-width:768px) {
     .navbar-wrapper {
         position: absolute;
         top: 0;
         right: 0;
         left: 0;
         z-index: 20;
-        width: 250px;
+        width: $menuWidth;
         height: 100%;
         transition-timing-function: ease-out;
         transition:left .7s;
@@ -55,31 +57,37 @@ body {
         .container {
             padding-right: 0;
             padding-left: 0;
-            width: 250px;
+            width: $menuWidth;
             height: 100%;
         }
 
         .navbar {
             padding-right: 15px;
             padding-left: 15px;
-            width: 250px;
+            width: $menuWidth;
             height: 100%;
 
             .container {
-                width: 220px;
+                width: $menuWidth - 30px;
             }
         }
 
         .navbar-tab {
-            padding: 10px;
-            background-color: #000;
-            color: #fff;
+            padding: 8px;
+            width: 51px;
+            height: 51px;
+            background-color: #fff;
+            color: #000;
             float: right;
             margin-right: -50px;
+            
+            img {
+                width: 35px;
+            }
         }
     }
     .nav-close {
-        left: -250px;
+        left: -$menuWidth;
     }
     .nav-open {
         left: 0px;
@@ -90,7 +98,7 @@ body {
     }
 }
 
-@media (max-width:1023px) {
+@media (max-width:767px) {
     .navbar-tab {
         width: 40px;
         display: none;
@@ -124,6 +132,7 @@ body {
             .container {
                 width: 100% !important;
                 height: 100%;
+                padding: 50px;
                 background-color: $bg-overlay-color;
             }
         }

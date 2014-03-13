@@ -16,7 +16,7 @@ body {
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .navbar-wrapper {
     position: absolute;
     top: 0;
@@ -46,11 +46,15 @@ body {
       .navbar-wrapper .navbar .container {
         width: 220px; }
     .navbar-wrapper .navbar-tab {
-      padding: 10px;
-      background-color: #000;
-      color: #fff;
+      padding: 8px;
+      width: 51px;
+      height: 51px;
+      background-color: #fff;
+      color: #000;
       float: right;
       margin-right: -50px; }
+      .navbar-wrapper .navbar-tab img {
+        width: 35px; }
 
   .nav-close {
     left: -250px; }
@@ -60,7 +64,7 @@ body {
 
   .menu-link, .menu-link a {
     cursor: pointer; } }
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .navbar-tab {
     width: 40px;
     display: none; } }
@@ -84,6 +88,7 @@ body {
       .carousel .carousel-inner .item .container {
         width: 100% !important;
         height: 100%;
+        padding: 50px;
         background-color: rgba(0, 0, 0, 0.75); }
   .carousel .mainCanvas {
     position: absolute;
